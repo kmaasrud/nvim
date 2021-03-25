@@ -9,12 +9,14 @@ require('keys')
 -- Plugin configs
 require('pconf/compe')
 require('pconf/barbar')
-require('pconf/treesitter')
 require('pconf/telescope')
 require('pconf/sneak')
 require('pconf/toggleterm')
-require('pconf/neuron')
 require('pconf/vim_pandoc_syntax')
+if require('utils').get_hostname() == 'knix' then
+  require('pconf/treesitter')
+  require('pconf/neuron')
+end
 
 -- Theme
 require('monokai')
