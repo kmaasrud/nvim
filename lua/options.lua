@@ -2,7 +2,7 @@ vim.o.updatetime = 1000                             -- Make updates happen faste
 
 -- Sensible defaults
 vim.o.hidden = true                                 -- Keep multiple buffers open without needing to save
-vim.o.wrap = false                                  -- No wrapping by default
+vim.wo.wrap = false                                  -- No wrapping by default
 vim.o.scrolloff = 6                                 -- Begin scrolling when cursor is this many rows away from the top/bottom
 vim.o.fileencoding = 'utf-8'                        -- Encode as UTF-8 when writing to file
 vim.o.ignorecase = true                             -- Search is not case-sensitive
@@ -16,6 +16,9 @@ vim.o.clipboard = 'unnamedplus'                     -- Use native clipboard
 vim.o.shortmess = vim.o.shortmess .. 'c'            -- Don't pass messages to |ins-completion-menu|
 vim.o.belloff = 'all'                               -- Stop the damn bell
 vim.g['netrw_dirhistmax'] = 0                       -- Fuck off, netrw
+if require('utils').get_hostname() == 'knix' then
+  vim.o.shell = '/bin/fish'                         -- If on laptop, use fish shell
+end
 
 -- Danger zone!!
 vim.o.backup = false                                -- Living on the edge! SAVE OFTEN
@@ -30,7 +33,7 @@ vim.o.t_Co = '256'                                  -- 256 bit color support
 vim.o.showmode = false                              -- No need to show the mode I'm in
 vim.o.pumblend = 17                                 -- Cool floating window popup menu for completion on command line
 vim.o.pumheight = 10                                -- Smaller popup menu
-vim.o.signcolumn = "number"                         -- Show signs (from e.g. LSP) over the numbers
+vim.wo.signcolumn = 'number'                         -- Show signs (from e.g. LSP) over the numbers
 vim.o.laststatus = 0                                -- No status line
 vim.o.cmdheight = 1                                 -- Smaller command line
 vim.wo.cursorline = true                             -- Show a cursorline
