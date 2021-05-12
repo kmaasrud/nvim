@@ -1,5 +1,5 @@
 require('neuron').setup {
-  neuron_dir = '~/brain',
+  neuron_dir = '~/z',
   leader = '<leader>z',
 }
 

@@ -35,7 +35,6 @@ return require('packer').startup(function()
     requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }, { 'nvim-telescope/telescope-fzy-native.nvim' } }
   }
 
-  -- Note-taking (personal fork of oberblastmeister/neuron.nvim)
+  -- Note-taking
   use {'oberblastmeister/neuron.nvim', branch = 'unstable'}
-
 end)
