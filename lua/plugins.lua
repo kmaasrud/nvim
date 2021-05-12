@@ -6,9 +6,6 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function()
-  -- Packer can manage itself as an optional plugin
-  use {'wbthomason/packer.nvim', opt = true}
-
   -- Additional motions and ease of use
   use 'justinmk/vim-sneak' -- Use s for quickly navigating with two chars
   use 'b3nj5m1n/kommentary' -- Support for comments
@@ -17,13 +14,18 @@ return require('packer').startup(function()
   use 'machakann/vim-highlightedyank' -- Highlight yanked areas
 
   -- LSP, Treesitter and friends
+  use 'neovim/nvim-lsp'
   use 'neovim/nvim-lspconfig'
+  use 'kabouzeid/nvim-lspinstall'
+  use 'glepnir/lspsaga.nvim'
   use 'hrsh7th/nvim-compe'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'vim-pandoc/vim-pandoc-syntax' -- This is temporary. I would much prefer treesitter highlighting
+  use 'cespare/vim-toml'
 
   -- Theme
   use 'tanvirtin/nvim-monokai'
+  use 'mhartington/oceanic-next'
 
   -- UI
   use 'romgrk/barbar.nvim'

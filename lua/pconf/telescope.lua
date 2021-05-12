@@ -36,21 +36,7 @@ end
 
 -- Keymaps
 vim.api.nvim_set_keymap(
-  'n', '<leader>fg',
-  ':lua require("telescope.builtin").git_files(' .. M.theme('Git > ') .. ')<CR>',
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-  'n', '<leader>ff',
+  'n', '<leader>f',
   ':lua require("telescope.builtin").find_files(' .. M.theme('File > ') .. ')<CR>',
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-  'n', '<leader>fb',
-  ':lua require("telescope.builtin").buffers(' .. M.theme('Buffer > ') .. ')<CR>',
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap('n', '<leader>fr',
-  ':lua require("telescope.builtin").grep_string(' .. M.theme('Grep > ') .. ', { search = vim.fn.input("Grep for > ") })<CR>',
   { noremap = true, silent = true }
 )
