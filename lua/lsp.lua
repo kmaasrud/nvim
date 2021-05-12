@@ -1,4 +1,4 @@
-DATA_PATH = vim.fn.stdpath('data')
+DATA_PATH = vim.fn.stdpath('data') -- To simplify finding the path where lspinstall puts LSP servers.
 vim.g.completion_matching_strategy = { 'exact', 'substring', 'fuzzy' }
 
 -- Rust
@@ -13,7 +13,6 @@ require'lspconfig'.pyright.setup {
         ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
             virtual_text = true,
             update_in_insert = true
-
         })
     }
 }
@@ -35,7 +34,6 @@ require('lspconfig').neuron_ls.setup{}
 require'lspconfig'.gopls.setup{
     cmd = {DATA_PATH .. "/lspinstall/go/gopls"},
 }
--- require'lspconfig'.gopls.setup{cmd = {'gopls', '--remote=auto'}}
 
 -- Bash
 require'lspconfig'.bashls.setup {
@@ -57,7 +55,6 @@ require'lspconfig'.jsonls.setup {
         "node", DATA_PATH .. "/lspinstall/json/vscode-json/json-language-features/server/dist/node/jsonServerMain.js",
         "--stdio"
     },
-
     commands = {
         Format = {
             function()
@@ -67,7 +64,7 @@ require'lspconfig'.jsonls.setup {
     }
 }
 
--- Lua
+-- Lua (surprisingly, this whole mess is needed for the native scripting language...)
 local sumneko_root_path = DATA_PATH .. "/lspinstall/lua"
 local sumneko_binary = sumneko_root_path .. "/sumneko-lua-language-server"
 require'lspconfig'.sumneko_lua.setup {

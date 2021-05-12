@@ -28,9 +28,9 @@ function utils.table_to_string(tbl)
     return result.."}"
 end
 
--- Function to get the hostname, allows for per computer configs
+-- Function to get the hostname. Allows for per computer configs
 function utils.get_hostname()
-    local f = io.popen ("/bin/hostname")
+    local f = io.popen("/bin/hostname")
     local hostname = f:read("*a") or ""
     f:close()
     hostname = string.gsub(hostname, "\n$", "")
@@ -38,4 +38,3 @@ function utils.get_hostname()
 end
 
 return utils
-
