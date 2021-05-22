@@ -17,7 +17,6 @@ return require('packer').startup(function()
   use 'neovim/nvim-lsp'
   use 'neovim/nvim-lspconfig'
   use 'kabouzeid/nvim-lspinstall'
-  use 'glepnir/lspsaga.nvim'
   use 'hrsh7th/nvim-compe'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'vim-pandoc/vim-pandoc-syntax' -- This is temporary. I would much prefer treesitter highlighting
@@ -25,7 +24,6 @@ return require('packer').startup(function()
 
   -- Theme
   use 'tanvirtin/nvim-monokai'
-  use 'mhartington/oceanic-next'
 
   -- UI
   use 'romgrk/barbar.nvim'

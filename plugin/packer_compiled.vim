@@ -83,10 +83,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/kommentary"
   },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
-  },
   ["neuron.nvim"] = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/neuron.nvim"
@@ -118,10 +114,6 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  ["oceanic-next"] = {
-    loaded = true,
-    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/oceanic-next"
   },
   ["plenary.nvim"] = {
     loaded = true,

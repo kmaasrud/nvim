@@ -1,5 +1,5 @@
 -- Sensible defaults
-vim.o.updatetime = 1000                             -- Make updates happen faster
+vim.o.updatetime = 500                             -- Make updates happen faster
 vim.o.hidden = true                                 -- Keep multiple buffers open without needing to save
 vim.wo.wrap = false                                 -- No wrapping by default
 vim.o.scrolloff = 6                                 -- Begin scrolling when cursor is this many rows away from the top/bottom

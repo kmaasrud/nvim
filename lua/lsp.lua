@@ -1,3 +1,14 @@
+-- Remove virtual text and display error messages on hover instead
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+	vim.lsp.diagnostic.on_publish_diagnostics, {
+		virtual_text = false,
+		underline = true,
+		signs = true,
+	}
+)
+vim.api.nvim_command("autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()")
+vim.api.nvim_command("autocmd CursorHoldI * silent! lua vim.lsp.buf.signature_help()")
+
 DATA_PATH = vim.fn.stdpath('data') -- To simplify finding the path where lspinstall puts LSP servers.
 vim.g.completion_matching_strategy = { 'exact', 'substring', 'fuzzy' }
 
