@@ -7,7 +7,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 	}
 )
 vim.api.nvim_command("autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()")
-vim.api.nvim_command("autocmd CursorHoldI * silent! lua vim.lsp.buf.signature_help()")
 
 DATA_PATH = vim.fn.stdpath('data') -- To simplify finding the path where lspinstall puts LSP servers.
 vim.g.completion_matching_strategy = { 'exact', 'substring', 'fuzzy' }
