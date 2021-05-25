@@ -38,7 +38,7 @@ vim.wo.cursorline = true                            -- Show a cursorline
 -- Status and command line
 vim.o.cmdheight = 1                                 -- Smaller command line
 vim.o.laststatus = 2                                -- No status line
-vim.o.statusline = '%m %f' -- modifiedflag, charcount, filepercent, filepath
+vim.o.statusline = '%=%m %f'                        -- Place right, modified flag, filepath
 
 -- Tabs
 -- 4 spaces - the only acceptable way (exceptions include Lua and HTML, defined in ftplugin)
