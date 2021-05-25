@@ -22,12 +22,23 @@ vim.api.nvim_set_keymap('n', '<M-O>', 'O<Esc>', { noremap = true })
 -- cd into directory of current buffer
 vim.api.nvim_set_keymap('n', '<leader>cd', ':cd %:p:h<CR>', { noremap = true })
 
--- Quick save
-vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true })
-
 -- Sensible undo
 vim.api.nvim_set_keymap('n', 'U', '<C-r>', { noremap = true })
 
 -- Paste the last yank (no d or c) without dealing with the mental overhead of register
 vim.api.nvim_set_keymap('n', 'yp', '"0p', { noremap = true })
 vim.api.nvim_set_keymap('n', 'yP', '"0P', { noremap = true })
+
+-- Window navigation
+vim.api.nvim_set_keymap('n', '<M-h>', '<C-w>h', { noremap = true })
+vim.api.nvim_set_keymap('n', '<M-j>', '<C-w>j', { noremap = true })
+vim.api.nvim_set_keymap('n', '<M-k>', '<C-w>k', { noremap = true })
+vim.api.nvim_set_keymap('n', '<M-l>', '<C-w>l', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-l>', ':vertical resize -5<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-h>', ':vertical resize +5<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-j>', ':resize -5<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-k>', ':resize +5<cr>', { noremap = true })
+
+-- Buffer navigation
+vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprev<CR>', { noremap = true, silent = true })

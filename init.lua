@@ -1,4 +1,4 @@
- --- Set space as the leader key
+-- Set space as the leader key
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 
@@ -8,11 +8,12 @@ require('keys')
 
 -- Plugin configs
 require('pconf/compe')
-require('pconf/barbar')
-require('pconf/telescope')
+require('pconf/netrw')
 require('pconf/sneak')
+require('pconf/telescope')
 require('pconf/toggleterm')
 require('pconf/vim_pandoc_syntax')
+require('pconf/which-key')
 if require('utils').get_hostname() == 'knix' then
   require('pconf/treesitter')
   require('pconf/neuron')

@@ -1,5 +1,5 @@
 -- Sensible defaults
-vim.o.updatetime = 500                             -- Make updates happen faster
+vim.o.updatetime = 400                             -- Make updates happen faster
 vim.o.hidden = true                                 -- Keep multiple buffers open without needing to save
 vim.wo.wrap = false                                 -- No wrapping by default
 vim.o.scrolloff = 6                                 -- Begin scrolling when cursor is this many rows away from the top/bottom
@@ -33,9 +33,12 @@ vim.o.showmode = false                              -- No need to show the mode 
 vim.o.pumblend = 17                                 -- Cool floating window popup menu for completion on command line
 vim.o.pumheight = 10                                -- Smaller popup menu
 vim.wo.signcolumn = 'number'                        -- Show signs (from e.g. LSP) over the numbers
-vim.o.laststatus = 0                                -- No status line
-vim.o.cmdheight = 1                                 -- Smaller command line
 vim.wo.cursorline = true                            -- Show a cursorline
+
+-- Status and command line
+vim.o.cmdheight = 1                                 -- Smaller command line
+vim.o.laststatus = 2                                -- No status line
+vim.o.statusline = '%m %f' -- modifiedflag, charcount, filepercent, filepath
 
 -- Tabs
 -- 4 spaces - the only acceptable way (exceptions include Lua and HTML, defined in ftplugin)

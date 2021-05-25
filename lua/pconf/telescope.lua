@@ -36,7 +36,7 @@ end
 
 -- Keymaps
 vim.api.nvim_set_keymap(
-  'n', '<leader>f',
+  'n', '<leader><leader>',
   ':lua require("telescope.builtin").find_files(' .. M.theme('File > ') .. ')<CR>',
   { noremap = true, silent = true }
 )

@@ -26,8 +26,8 @@ return require('packer').startup(function()
   use 'tanvirtin/nvim-monokai'
 
   -- UI
-  use 'romgrk/barbar.nvim'
   use 'akinsho/nvim-toggleterm.lua'
+  use 'folke/which-key.nvim'
   use {
     'nvim-telescope/telescope.nvim',
     requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }, { 'nvim-telescope/telescope-fzy-native.nvim' } }

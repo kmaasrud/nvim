@@ -75,10 +75,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/barbar.nvim"
-  },
   kommentary = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/kommentary"
@@ -150,6 +146,10 @@ _G.packer_plugins = {
   ["vim-toml"] = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/vim-toml"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 
