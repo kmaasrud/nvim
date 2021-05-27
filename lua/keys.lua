@@ -40,5 +40,5 @@ vim.api.nvim_set_keymap('n', '<C-j>', ':resize -5<cr>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', ':resize +5<cr>', { noremap = true })
 
 -- Buffer navigation
-vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<TAB>', '<C-^>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprev<CR>', { noremap = true, silent = true })
