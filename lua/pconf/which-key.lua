@@ -30,6 +30,7 @@ wk.register({
     name = "buffer",
     b = { "<cmd>Telescope buffers<cr>", "Find buffer" },
     f = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find in current buffer" },
+    d = { ":bd<cr>", "Delete current buffer" },
   },
 
   -- Help commands
