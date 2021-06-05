@@ -1,3 +1,6 @@
+-- Keymaps
+vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', { noremap = true })
+
 -- Remove virtual text and display error messages on hover instead
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 	vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -12,6 +15,13 @@ DATA_PATH = vim.fn.stdpath('data') -- To simplify finding the path where lspinst
 vim.g.completion_matching_strategy = { 'exact', 'substring', 'fuzzy' }
 
 -- Rust
+--[[ require('lspconfig').rls.setup{
+  settings = {
+    unstable_features = true,
+    all_features = true,
+    build_on_save = false,
+  }
+} ]]
 require'lspconfig'.rust_analyzer.setup{
     cmd = {DATA_PATH .. "/lspinstall/rust/rust-analyzer"},
 }

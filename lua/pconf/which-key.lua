@@ -38,7 +38,8 @@ wk.register({
     name = "help",
     h = { "<cmd>Telescope help_tags<cr>", "Find in help" },
     o = { ":help<cr>", "Open help" },
-    g = { ':execute "set colorcolumn=" . (&colorcolumn == "" ? "81" : "")<CR>', "Show an 80 character guide" },
+    g = { ':execute "set colorcolumn=" . (&colorcolumn == "" ? "99" : "")<CR>', "Show an 80 character guide" },
+    f = { ":lua vim.lsp.buf.hover()<cr>", "Show LSP hover text." }
   },
 
   -- Directory commands

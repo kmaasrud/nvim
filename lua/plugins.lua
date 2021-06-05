@@ -21,6 +21,7 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'vim-pandoc/vim-pandoc-syntax' -- This is temporary. I would much prefer treesitter highlighting
   use 'cespare/vim-toml'
+  use 'ray-x/lsp_signature.nvim'
 
   -- Theme
   use 'tanvirtin/nvim-monokai'

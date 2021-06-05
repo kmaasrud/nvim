@@ -79,6 +79,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/kommentary"
   },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
+  },
   ["neuron.nvim"] = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/neuron.nvim"
