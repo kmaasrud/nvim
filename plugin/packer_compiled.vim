@@ -46,9 +46,9 @@ local function save_profiles(threshold)
   _G._packer.profile_output = results
 end
 
-time("Luarocks path setup", true)
-local package_path_str = "/home/kmaasrud/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/kmaasrud/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/kmaasrud/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/kmaasrud/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/kmaasrud/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
+time([[Luarocks path setup]], true)
+local package_path_str = "/home/kmaasrud/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/kmaasrud/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/kmaasrud/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/kmaasrud/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/kmaasrud/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -57,20 +57,25 @@ if not string.find(package.cpath, install_cpath_pattern, 1, true) then
   package.cpath = package.cpath .. ';' .. install_cpath_pattern
 end
 
-time("Luarocks path setup", false)
-time("try_loadstring definition", true)
+time([[Luarocks path setup]], false)
+time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
   local success, result = pcall(loadstring(s))
   if not success then
-    print('Error running ' .. component .. ' for ' .. name)
-    error(result)
+    vim.schedule(function()
+      vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {})
+    end)
   end
   return result
 end
 
-time("try_loadstring definition", false)
-time("Defining packer_plugins", true)
+time([[try_loadstring definition]], false)
+time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["TrueZen.nvim"] = {
+    loaded = true,
+    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/TrueZen.nvim"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/auto-pairs"
@@ -82,6 +87,10 @@ _G.packer_plugins = {
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
+  },
+  ["monokai.nvim"] = {
+    loaded = true,
+    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/monokai.nvim"
   },
   ["neuron.nvim"] = {
     loaded = true,
@@ -102,10 +111,6 @@ _G.packer_plugins = {
   ["nvim-lspinstall"] = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
-  },
-  ["nvim-monokai"] = {
-    loaded = true,
-    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/nvim-monokai"
   },
   ["nvim-toggleterm.lua"] = {
     loaded = true,
@@ -157,7 +162,7 @@ _G.packer_plugins = {
   }
 }
 
-time("Defining packer_plugins", false)
+time([[Defining packer_plugins]], false)
 if should_profile then save_profiles() end
 
 END

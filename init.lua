@@ -1,4 +1,4 @@
--- Set space as the leader key
+--- Set space as the leader key
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 
@@ -21,9 +21,10 @@ if require('utils').get_hostname() == 'knix' then
 end
 
 -- Theme
-require('monokai')
-vim.api.nvim_command('highlight Normal ctermbg=NONE guibg=NONE')
-vim.api.nvim_command("exec 'hi CursorLineNr guibg=' . synIDattr(hlID('CursorLine'),'bg')")
+local monokai = require('monokai')
+monokai.setup(monokai.palette_pro)
+vim.cmd('highlight LineNr ctermbg=NONE guibg=NONE')
+vim.cmd("exec 'hi CursorLineNr guibg=' . synIDattr(hlID('CursorLine'),'bg')")
 
 -- LSP must be after theme to ensure correct highlighting
 require('lsp')
