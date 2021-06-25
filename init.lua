@@ -21,10 +21,20 @@ if require('utils').get_hostname() == 'knix' then
 end
 
 -- Theme
-local monokai = require('monokai')
-monokai.setup(monokai.palette_pro)
-vim.cmd('highlight LineNr ctermbg=NONE guibg=NONE')
-vim.cmd("exec 'hi CursorLineNr guibg=' . synIDattr(hlID('CursorLine'),'bg')")
+require('monokai')
+vim.cmd([[
+function! MyHighlights() abort
+    highlight LineNr ctermbg=NONE guibg=NONE
+    exec 'hi CursorLineNr guibg=' . synIDattr(hlID('CursorLine'),'bg')
+endfunction
+
+augroup MyColors
+    autocmd!
+    autocmd ColorScheme * call MyHighlights()
+augroup END
+
+colorscheme monokai_pro
+]])
 
 -- LSP must be after theme to ensure correct highlighting
 require('lsp')

@@ -7,7 +7,7 @@ end
 
 return require('packer').startup(function()
   -- Additional motions and ease of use
-  use 'justinmk/vim-sneak' -- Use s for quickly navigating with two chars
+  use 'ggandor/lightspeed.nvim' -- Use s for quickly navigating with two chars
   use 'b3nj5m1n/kommentary' -- Support for comments
   use 'jiangmiao/auto-pairs' -- Automatic bracket and quote matching
   use 'tpope/vim-surround' -- Motions for surrounding chars
@@ -33,7 +33,7 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }, { 'nvim-telescope/telescope-fzy-native.nvim' } }
   }
-  use "Pocco81/TrueZen.nvim"
+  use "folke/zen-mode.nvim"
 
   -- Note-taking
   use {'oberblastmeister/neuron.nvim', branch = 'unstable'}

@@ -72,10 +72,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["TrueZen.nvim"] = {
-    loaded = true,
-    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/TrueZen.nvim"
-  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/auto-pairs"
@@ -83,6 +79,10 @@ _G.packer_plugins = {
   kommentary = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/kommentary"
+  },
+  ["lightspeed.nvim"] = {
+    loaded = true,
+    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/lightspeed.nvim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -144,10 +144,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/vim-pandoc-syntax"
   },
-  ["vim-sneak"] = {
-    loaded = true,
-    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/vim-sneak"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/vim-surround"
@@ -159,6 +155,10 @@ _G.packer_plugins = {
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/which-key.nvim"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/zen-mode.nvim"
   }
 }
 

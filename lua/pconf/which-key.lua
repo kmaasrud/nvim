@@ -23,6 +23,7 @@ wk.register({
     s = { "<C-w>v", "Split window vertically" },
     h = { "<C-w>s", "Split window horizontally" },
     q = { "<C-w>q", "Quit current window" },
+    z = { "<cmd>ZenMode<cr>", "Toggle Zen mode" },
   },
 
   -- Buffer commands
@@ -31,6 +32,7 @@ wk.register({
     b = { "<cmd>Telescope buffers<cr>", "Find buffer" },
     f = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find in current buffer" },
     d = { ":bd<cr>", "Delete current buffer" },
+    n = { "<cmd>set number!<cr><cmd>set relativenumber!<cr>", "Toggle numbers in buffer" }
   },
 
   -- Help commands
