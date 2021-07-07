@@ -76,6 +76,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
+  ["buftabline.nvim"] = {
+    loaded = true,
+    path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/buftabline.nvim"
+  },
   kommentary = {
     loaded = true,
     path = "/home/kmaasrud/.local/share/nvim/site/pack/packer/start/kommentary"

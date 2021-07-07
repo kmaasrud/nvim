@@ -15,9 +15,10 @@ require('pconf/toggleterm')
 require('pconf/vim_pandoc_syntax')
 require('pconf/which-key')
 require('pconf/lsp_signature')
+require('pconf/buftabline')
 if require('utils').get_hostname() == 'knix' then
   require('pconf/treesitter')
-  require('pconf/neuron')
+  -- require('pconf/neuron')
 end
 
 -- Theme

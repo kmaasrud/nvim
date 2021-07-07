@@ -24,7 +24,7 @@ return require('packer').startup(function()
   use 'ray-x/lsp_signature.nvim'
 
   -- Theme
-  use '/home/kmaasrud/dev/monokai.nvim'
+  use 'tanvirtin/monokai.nvim'
 
   -- UI
   use 'akinsho/nvim-toggleterm.lua'
@@ -34,6 +34,7 @@ return require('packer').startup(function()
     requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }, { 'nvim-telescope/telescope-fzy-native.nvim' } }
   }
   use "folke/zen-mode.nvim"
+  use 'jose-elias-alvarez/buftabline.nvim'
 
   -- Note-taking
   use {'oberblastmeister/neuron.nvim', branch = 'unstable'}
